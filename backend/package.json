@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "server": "nodemon app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
     "express": "^4.17.3",
+    "express-validator": "^6.14.0",
     "mongoose": "^6.2.6",
     "nodemon": "^2.0.15"
   }

@@ -1,1 +1,38 @@
-<p>catalogue works!</p>
+<app-header></app-header>
+<div
+  class="search-bar row height d-flex justify-content-center align-items-center"
+>
+  <div class="col-md-6">
+    <form class="form">
+      <div class="input-group-prepend">
+        <i class="fa fa-light fa-search fa-2x"></i>
+        <input type="text" class="form-control form-input" />
+        <button class="addButton">+</button>
+      </div>
+    </form>
+  </div>
+</div>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th>SID</th>
+      <th>PRODUCT</th>
+      <th>CATEGORY</th>
+      <th>QUANTITY</th>
+      <th>PRICE/BOTTLE</th>
+      <th>EDIT</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let wine of wines">
+      <td>{{ wine.sid }}</td>
+      <td>{{ wine.product }}</td>
+      <td>{{ wine.category }}</td>
+      <td>{{ wine.quantity }}</td>
+      <td>{{ wine.price }}</td>
+      <td><a class="fa fa-lg fa-edit action"></a></td>
+      <td><a class="fa fa-lg fa-trash action"></a></td>
+    </tr>
+  </tbody>
+</table>

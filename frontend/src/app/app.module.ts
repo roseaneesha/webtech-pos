@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { SalesComponent } from './sales/sales.component';
 import { PosComponent } from './pos/pos.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PosComponent } from './pos/pos.component';
     CartComponent,
     SalesComponent,
     PosComponent,
+    CatalogueComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

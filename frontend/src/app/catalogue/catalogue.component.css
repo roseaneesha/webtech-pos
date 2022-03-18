@@ -1,0 +1,31 @@
+input {
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+table {
+  margin: 3rem 1rem 1rem 1rem;
+}
+
+.search-bar {
+  padding-top: 4rem;
+}
+
+.fa-search {
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+  color: #333333;
+}
+
+.addButton {
+  margin-left: 2rem;
+  border-radius: 7px;
+  background-color: #7ac500;
+  width: 3rem;
+  border-style: none;
+}
+
+.action {
+  color: black;
+  cursor: pointer;
+}

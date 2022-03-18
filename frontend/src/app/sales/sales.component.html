@@ -1,1 +1,37 @@
-<p>sales works!</p>
+<app-header></app-header>
+<div
+  class="search-bar row height d-flex justify-content-center align-items-center"
+>
+  <div class="col-md-6">
+    <form class="form">
+      <div class="input-group-prepend">
+        <i class="fa fa-light fa-search fa-2x"></i>
+        <input type="text" class="form-control form-input" />
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th>OID</th>
+        <th>DATE</th>
+        <th>ITEMS</th>
+        <th>QUANTITY</th>
+        <th>PRICE</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let index of sales">
+        <td>{{ index.oid }}</td>
+        <td>{{ index.date }}</td>
+        <td>{{ index.items }}</td>
+        <td>{{ index.quantity }}</td>
+        <td>{{ index.price }}</td>
+        <td><a class="fa fa-lg fa-trash action"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

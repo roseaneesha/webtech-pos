@@ -18,11 +18,15 @@ table {
   margin: 3rem 1rem 1rem 1rem;
 }
 
-.action {
+.delete {
   color: black;
-  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  background-color: white;
+  border: none;
 }
 
-.action :hover {
+.delete:hover {
   color: red;
+  cursor: pointer;
 }

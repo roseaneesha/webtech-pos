@@ -40,4 +40,35 @@ router.post(
   }
 );
 
+router.post(
+  "/",
+  [
+    check("empId", "Please enter a valid employee Id").exists(),
+    check("password", "Password is required").exists(),
+  ],
+  async (req, res) => {
+    try {
+      const err = validationResult(req);
+      if (!err.isEmpty()) {
+        return res.status(400).json({ errors: err.message });
+      }
+      const { empId, password } = req.body;
+
+      const emp = await User.findOne({ empId });
+      if (!emp) {
+        res.status(400).json({ msg: "Invalid credential" });
+      }
+
+      const isMatch = bcrypt.compare(password, emp.password);
+      if (!isMatch) {
+        res.status(400).json({ msg: "Invalid credential", error: err.message });
+      }
+      res.status(200).json({ msg: "Access granted" });
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Server error");
+    }
+  }
+);
+
 module.exports = router;
